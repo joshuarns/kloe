@@ -20,6 +20,18 @@
 //   stock       → unidades totales (0 = agotado)
 // ─────────────────────────────────────────────────────────────────────────────
 
+// Fotos reales de producto (carpeta assets/img/product_demo)
+import demo1 from "../assets/img/product_demo/505724799_1300582111499043_4019181611594138476_n.jpg";
+import demo2 from "../assets/img/product_demo/541554150_18066776699245664_5892365185287156345_n.jpg";
+import demo3 from "../assets/img/product_demo/545353269_18067335509245664_3343707223807930575_n.jpg";
+import demo4 from "../assets/img/product_demo/557691261_1414232156800704_2009176184165483514_n.jpg";
+import demo5 from "../assets/img/product_demo/557702938_1411734010383852_4045954297723071863_n.jpg";
+import demo6 from "../assets/img/product_demo/558158977_1415314266692493_7696134977452389607_n.jpg";
+import demo7 from "../assets/img/product_demo/559516745_1415294630027790_6150866778235154118_n.jpg";
+
+// Se ciclan estas fotos reales entre todas las tarjetas de producto.
+const DEMO_IMAGES = [demo1, demo2, demo3, demo4, demo5, demo6, demo7];
+
 export const CATEGORIES = [
   "Camisetas",
   "Camisas",
@@ -260,6 +272,14 @@ const PRODUCTS = [
     stock: 16,
   },
 ];
+
+// Asigna las fotos reales a cada tarjeta, ciclando las 7 imágenes disponibles.
+// (Sustituye los placeholders de picsum de arriba.)
+PRODUCTS.forEach((p, i) => {
+  const main = DEMO_IMAGES[i % DEMO_IMAGES.length];
+  const alt = DEMO_IMAGES[(i + 1) % DEMO_IMAGES.length];
+  p.images = [main, alt];
+});
 
 // ── API mock ─────────────────────────────────────────────────────────────────
 // Simulan las llamadas asíncronas que hará el backend real. Devuelven promesas
