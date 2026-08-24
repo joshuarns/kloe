@@ -15,6 +15,14 @@
     padding: 130px 1.5rem 2rem 2.5rem;
     z-index: 20;
     gap: 2.25rem;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  /* Oculto al bajar el scroll; reaparece al subir */
+  .kloe-sidebar.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   /* Panel blanco que aparece al pasar el cursor (como Zara).

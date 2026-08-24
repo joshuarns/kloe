@@ -13,6 +13,7 @@
 //   · `density` (opcional) muestra el selector de densidad del grid (Tienda).
 // ─────────────────────────────────────────────────────────────────────────────
 
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { CATEGORIES } from "../../data/products";
 import "./CategorySidebar.css";
@@ -26,8 +27,29 @@ export default function CategorySidebar({
   onOpenFilters,
   density,
 }) {
+  // Ocultar al bajar / mostrar al subir (según la dirección del scroll).
+  const [hidden, setHidden] = useState(false);
+  const lastY = useRef(0);
+
+  useEffect(() => {
+    lastY.current = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const diff = y - lastY.current;
+      if (Math.abs(diff) < 6) return; // umbral: evita parpadeo con micro-scrolls
+      if (diff > 0 && y > 120) {
+        setHidden(true); // bajando
+      } else {
+        setHidden(false); // subiendo (o cerca del tope)
+      }
+      lastY.current = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <aside className="kloe-sidebar">
+    <aside className={`kloe-sidebar ${hidden ? "is-hidden" : ""}`}>
       <nav className="kloe-sidebar-nav">
         {NAV_ITEMS.map((c, i) => {
           const active = activeCategory === c;
