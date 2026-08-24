@@ -1,0 +1,145 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   index.css — sistema de diseño de Kloe (estilo minimalista tipo Zara)
+   Blanco puro, negro, gris de producto. Todo en mayúsculas, sans-serif con
+   tracking amplio, cero decoración (sin sombras ni bordes redondeados).
+   ───────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Paleta — monocroma */
+  --kloe-ink: #000000; /* texto principal / negro */
+  --kloe-ink-soft: #666666; /* texto secundario */
+  --kloe-muted: #999999; /* texto terciario */
+  --kloe-line: #e5e5e5; /* separadores muy sutiles */
+  --kloe-bg: #ffffff; /* fondo base */
+  --kloe-prod-bg: #f0efed; /* gris tras las fotos de producto */
+  --kloe-sale: #c0392b; /* precio rebajado */
+  --kloe-bg-alt: #fafafa; /* gris muy claro para cajas de resumen */
+  --kloe-accent: #000000; /* sin acento de color: negro */
+
+  /* Tipografía — grotesca limpia para todo; serif solo para etiquetas editoriales */
+  --kloe-font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --kloe-font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+  /* Tracking base para mayúsculas */
+  --kloe-track: 0.12em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--kloe-font-sans);
+  color: var(--kloe-ink);
+  background: var(--kloe-bg);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Por defecto los encabezados usan la sans en mayúsculas (como Zara);
+   .kloe-serif se reserva para el logotipo y etiquetas editoriales. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--kloe-font-sans);
+  font-weight: 400;
+  margin: 0;
+}
+
+.kloe-serif {
+  font-family: var(--kloe-font-serif);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ── Botón sólido negro (cuadrado, mayúsculas, tracking) ── */
+.btn-kloe {
+  display: inline-block;
+  background: var(--kloe-ink);
+  border: 1px solid var(--kloe-ink);
+  color: #fff;
+  border-radius: 0;
+  padding: 0.95rem 1.6rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: var(--kloe-track);
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.btn-kloe:hover {
+  opacity: 0.82;
+  color: #fff;
+}
+.btn-kloe:disabled {
+  background: #c9c9c9;
+  border-color: #c9c9c9;
+  cursor: not-allowed;
+}
+
+/* ── Botón outline ── */
+.btn-kloe-outline {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--kloe-ink);
+  color: var(--kloe-ink);
+  border-radius: 0;
+  padding: 0.95rem 1.6rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: var(--kloe-track);
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.btn-kloe-outline:hover {
+  background: var(--kloe-ink);
+  color: #fff;
+}
+
+/* ── Etiqueta pequeña editorial (serif, minúsculas versalitas) ── */
+.kloe-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--kloe-muted);
+  font-weight: 400;
+}
+
+/* Etiqueta serif centrada tipo "NEW ARRIVALS" */
+.kloe-editorial-label {
+  font-family: var(--kloe-font-serif);
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--kloe-ink);
+}
+
+/* Inputs cuadrados de marca */
+.form-control,
+.form-select {
+  border-radius: 0 !important;
+}

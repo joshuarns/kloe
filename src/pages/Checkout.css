@@ -1,0 +1,104 @@
+.kloe-checkout-section {
+  margin-bottom: 2rem;
+}
+
+.kloe-checkout-heading {
+  font-family: var(--kloe-font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--kloe-line);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.kloe-checkout-section .form-label {
+  font-size: 0.8rem;
+  color: var(--kloe-ink-soft);
+}
+.kloe-checkout-section .form-control {
+  border-radius: 0;
+  border-color: var(--kloe-line);
+}
+.kloe-checkout-section .form-control:focus {
+  border-color: var(--kloe-ink);
+  box-shadow: none;
+}
+
+.kloe-checkout-paynote {
+  background: var(--kloe-bg-alt);
+  border: 1px dashed var(--kloe-line);
+  padding: 0.9rem 1rem;
+  font-size: 0.85rem;
+  color: var(--kloe-ink-soft);
+}
+
+/* ── Ítems del resumen ── */
+.kloe-checkout-items {
+  margin-bottom: 1rem;
+}
+.kloe-checkout-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+.kloe-checkout-item-thumb {
+  position: relative;
+  width: 52px;
+  height: 68px;
+  flex-shrink: 0;
+  background: #fff;
+}
+.kloe-checkout-item-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kloe-checkout-item-qty {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--kloe-ink);
+  color: #fff;
+  font-size: 0.7rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kloe-checkout-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+}
+.kloe-checkout-item-info small {
+  color: var(--kloe-muted);
+  font-size: 0.75rem;
+}
+.kloe-checkout-item-price {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── Agradecimiento ── */
+.kloe-thanks {
+  min-height: 55vh;
+}
+.kloe-thanks-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--kloe-ink);
+  color: #fff;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

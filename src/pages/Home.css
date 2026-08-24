@@ -1,0 +1,95 @@
+/* ── Hero full-bleed ── */
+.kloe-hero {
+  position: relative;
+}
+.kloe-hero-img {
+  width: 100%;
+  height: 88vh;
+  min-height: 480px;
+  object-fit: cover;
+}
+.kloe-hero-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.kloe-hero-eyebrow {
+  color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+.kloe-hero-btn {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+.kloe-hero-btn:hover {
+  color: #000;
+  opacity: 0.9;
+}
+
+/* ── Grid de novedades ── */
+.kloe-home-grid {
+  padding: 3.5rem 1.5rem;
+}
+.kloe-home-grid .kloe-editorial-label {
+  margin-bottom: 2rem;
+}
+.kloe-home-more {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* ── Banner dividido ── */
+.kloe-splitbanner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0 1.5rem 3.5rem;
+}
+.kloe-split {
+  position: relative;
+  overflow: hidden;
+  background: var(--kloe-prod-bg);
+}
+.kloe-split img {
+  width: 100%;
+  height: 70vh;
+  min-height: 360px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.kloe-split:hover img {
+  transform: scale(1.03);
+}
+.kloe-split-label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: #fff;
+  color: #000;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .kloe-hero-img {
+    height: 70vh;
+  }
+  .kloe-splitbanner {
+    grid-template-columns: 1fr;
+  }
+  .kloe-split img {
+    height: 60vh;
+  }
+}

@@ -1,0 +1,92 @@
+/* ── Sidebar sobrepuesto (overlay fijo) estilo Zara ──
+   NO reserva columna: flota sobre el contenido con fondo transparente y, al ser
+   position:fixed, se mantiene visible al hacer scroll. Se oculta en móvil. */
+.kloe-sidebar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .kloe-sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 2.5rem;
+    top: 130px;
+    z-index: 20;
+    gap: 2.25rem;
+  }
+}
+
+/* Lista de categorías numeradas */
+.kloe-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.kloe-sidebar-item {
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 0.5rem 0;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3a3a3a;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  line-height: 1.1;
+}
+.kloe-sidebar-item:hover {
+  color: #000;
+}
+.kloe-sidebar-item.is-active {
+  color: #000;
+  font-weight: 700;
+}
+
+/* El número |01| va del mismo tono que la etiqueta (hereda color y peso) */
+.kloe-sidebar-num {
+  color: inherit;
+  margin-right: 0.55rem;
+  font-weight: inherit;
+}
+
+/* Acciones inferiores: FILTROS / EN TIENDA */
+.kloe-sidebar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.kloe-sidebar-action {
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 0;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3a3a3a;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+.kloe-sidebar-action:hover {
+  color: #000;
+}
+
+/* Selector de densidad (solo Tienda) */
+.kloe-sidebar-density {
+  display: flex;
+  gap: 0.75rem;
+}
+.kloe-sidebar-density button {
+  border: none;
+  background: none;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+.kloe-sidebar-density button.is-active {
+  color: #000;
+}

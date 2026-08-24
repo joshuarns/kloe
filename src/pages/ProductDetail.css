@@ -1,0 +1,167 @@
+.kloe-breadcrumb {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--kloe-muted);
+  margin-bottom: 1.5rem;
+}
+.kloe-breadcrumb a:hover {
+  color: var(--kloe-ink);
+}
+
+/* ── Galería ── */
+.kloe-gallery-main {
+  background: var(--kloe-prod-bg);
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+}
+.kloe-gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kloe-gallery-thumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.kloe-thumb {
+  width: 64px;
+  height: 90px;
+  padding: 0;
+  border: 1px solid transparent;
+  background: var(--kloe-prod-bg);
+  cursor: pointer;
+  overflow: hidden;
+}
+.kloe-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kloe-thumb.is-active {
+  border-color: var(--kloe-ink);
+}
+
+/* ── Info ── */
+.kloe-pd-info {
+  max-width: 380px;
+  padding-top: 1rem;
+}
+.kloe-pd-title {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 0.6rem;
+  line-height: 1.5;
+}
+.kloe-pd-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
+}
+.kloe-pd-price .kloe-price--old {
+  font-size: 0.85rem;
+}
+.kloe-pd-discount {
+  font-size: 0.72rem;
+  color: var(--kloe-sale);
+  letter-spacing: 0.04em;
+}
+
+.kloe-pd-desc {
+  color: var(--kloe-ink-soft);
+  line-height: 1.7;
+  font-size: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.kloe-pd-block {
+  margin-bottom: 1.5rem;
+}
+.kloe-pd-label {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--kloe-ink);
+  margin-bottom: 0.7rem;
+}
+.kloe-pd-required {
+  color: var(--kloe-sale);
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.kloe-pd-colors {
+  display: flex;
+  gap: 0.6rem;
+}
+.kloe-color-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--kloe-line);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.kloe-color-dot:hover {
+  transform: scale(1.1);
+}
+.kloe-color-dot.is-active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--kloe-ink);
+}
+
+.kloe-pd-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.kloe-qty {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--kloe-line);
+}
+.kloe-qty button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.kloe-qty span {
+  min-width: 40px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.kloe-pd-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1.75rem 0;
+}
+.kloe-pd-actions .btn-kloe,
+.kloe-pd-actions .btn-kloe-outline {
+  width: 100%;
+}
+
+.kloe-pd-perks {
+  list-style: none;
+  padding: 1.25rem 0 0;
+  margin: 0;
+  border-top: 1px solid var(--kloe-line);
+}
+.kloe-pd-perks li {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--kloe-ink-soft);
+  padding: 0.35rem 0;
+}

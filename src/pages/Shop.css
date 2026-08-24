@@ -1,0 +1,199 @@
+/* ── Utilidad: mostrar solo en móvil ── */
+.kloe-only-mobile {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .kloe-only-mobile {
+    display: none !important;
+  }
+}
+
+/* ── Tabs horizontales (móvil) ── */
+.kloe-tabs {
+  gap: 1.5rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--kloe-line);
+  scrollbar-width: none;
+}
+.kloe-tabs::-webkit-scrollbar {
+  display: none;
+}
+.kloe-tab {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--kloe-muted);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.kloe-tab:hover {
+  color: var(--kloe-ink);
+}
+.kloe-tab.is-active {
+  color: var(--kloe-ink);
+  font-weight: 700;
+}
+
+/* ── Layout PLP ── */
+.kloe-plp {
+  display: block;
+}
+
+/* ── Hero PLP ── */
+.kloe-shop-hero {
+  position: relative;
+}
+.kloe-shop-hero img {
+  width: 100%;
+  height: 78vh;
+  min-height: 340px;
+  object-fit: cover;
+}
+.kloe-shop-hero-label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Barra de herramientas ── */
+.kloe-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+.kloe-toolbar-count {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--kloe-ink-soft);
+}
+.kloe-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.kloe-order-select {
+  width: auto;
+  border: none;
+  border-bottom: 1px solid var(--kloe-ink);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 1.5rem 0.2rem 0.2rem;
+  background-position: right 0.1rem center;
+}
+.kloe-order-select:focus {
+  box-shadow: none;
+  border-color: var(--kloe-ink);
+}
+.kloe-toolbar-btn {
+  border: none;
+  background: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--kloe-ink);
+  cursor: pointer;
+  padding: 0;
+}
+.kloe-toolbar-btn:hover {
+  opacity: 0.6;
+}
+
+/* ── Cuerpo / grid ── */
+.kloe-shop-body {
+  padding: 0 1.5rem 4rem;
+}
+.kloe-shop-loading {
+  padding: 5rem 0;
+  text-align: center;
+  color: var(--kloe-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* ── Filtros (offcanvas) ── */
+.kloe-filter-group {
+  margin-bottom: 2rem;
+}
+.kloe-filter-title {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--kloe-muted);
+  margin-bottom: 0.85rem;
+}
+.kloe-filter-opt {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--kloe-ink-soft);
+  cursor: pointer;
+}
+.kloe-filter-opt:hover {
+  color: var(--kloe-ink);
+}
+.kloe-filter-opt.is-active {
+  color: var(--kloe-ink);
+  font-weight: 700;
+}
+.kloe-size-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.kloe-size-btn {
+  min-width: 46px;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--kloe-line);
+  background: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.kloe-size-btn:hover {
+  border-color: var(--kloe-ink);
+}
+.kloe-size-btn.is-active {
+  background: var(--kloe-ink);
+  color: #fff;
+  border-color: var(--kloe-ink);
+}
+.kloe-clear-btn {
+  border: none;
+  background: none;
+  color: var(--kloe-sale);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .kloe-toolbar-right {
+    gap: 0.85rem;
+  }
+  .kloe-order-select {
+    max-width: 130px;
+  }
+}

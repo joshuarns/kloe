@@ -1,0 +1,26 @@
+.kloe-grid {
+  display: grid;
+  gap: 2px 8px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .kloe-grid[data-cols="2"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .kloe-grid[data-cols="3"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .kloe-grid[data-cols="4"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.kloe-empty {
+  text-align: center;
+  padding: 5rem 1rem;
+  color: var(--kloe-muted);
+}
+.kloe-empty p {
+  margin: 0.4rem 0;
+}
