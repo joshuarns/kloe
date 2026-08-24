@@ -10,10 +10,33 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    left: 2.5rem;
-    top: 130px;
+    left: 0;
+    top: 0;
+    padding: 130px 1.5rem 2rem 2.5rem;
     z-index: 20;
     gap: 2.25rem;
+  }
+
+  /* Panel blanco que aparece al pasar el cursor (como Zara).
+     Es un pseudo-elemento con pointer-events:none, así NO bloquea los clics
+     del contenido que queda detrás. z-index:-1 lo deja tras el texto pero,
+     al estar dentro del contexto de apilamiento del sidebar (z:20), por
+     encima del hero. */
+  .kloe-sidebar::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15rem;
+    height: 100vh;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .kloe-sidebar:hover::before {
+    opacity: 1;
   }
 }
 
@@ -28,7 +51,7 @@
   background: none;
   text-align: left;
   padding: 0.5rem 0;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #3a3a3a;
@@ -62,7 +85,7 @@
   background: none;
   text-align: left;
   padding: 0;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #3a3a3a;
